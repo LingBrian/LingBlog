@@ -16,9 +16,13 @@
       >
        
         <n-thing
-          :title="article.title"
           content-style="margin-left:4px;margin-top: 10px;"
         >
+          <template #header>
+             <NuxtLink style="color: black;text-decoration: none;" target="_blank" :to="'/article?id='+article.id">
+              {{ article.title }}
+             </NuxtLink>
+          </template>
           <template #description>
             <n-space size="small" style="margin-left: 5px; margin-top: 4px">
               <n-tag size="small" type="success"
@@ -31,11 +35,16 @@
                 size="small"
               >
                 {{ tag }}
-              </n-tag><n-button @click="test(article.id)" size="tiny" type="error">删除</n-button>
+              </n-tag>
+              <n-button @click="update(article.id)" size="tiny" type="success">更新</n-button>
+              <n-button @click="del(article.id)" size="tiny" type="error">删除</n-button>
             </n-space>
           </template>
-          <n-ellipsis :line-clamp="2" v-html="article.overview ">
+           <NuxtLink style="color: black;" target="_blank" :to="'/article?id='+article.id">
+          <n-ellipsis tooltip="false" :line-clamp="2" v-html="article.overview ">
           </n-ellipsis>
+          </NuxtLink>
+          
         </n-thing>
       </n-list-item>
     </n-list>
@@ -43,7 +52,6 @@
 </template>
 
 <script setup lang="ts">
-
 const auth = useCookie("auth");
 const { data: user} = await useFetch('/api/user/user', {
               method: "post",
@@ -57,8 +65,10 @@ const { data: articles } = await useFetch('/api/article/list', {
     userid:user.value.user.id
   }
 })
-
-async function test(key: number) {
+function update(artid: number) {
+  navigateTo("/article/update?id="+artid)
+ }
+async function del(key: number) {
   const { data: res } = await useFetch('/api/article/delete', {
   method: 'post',
   body:{

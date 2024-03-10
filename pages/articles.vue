@@ -13,6 +13,7 @@
         :style="{ padding: '10px 0 0 16px',margin:'auto',width:'90%', height: '128px' }"
         bordered
       >
+       <NuxtLink  style="text-decoration: none;" target="_blank" :to="'/article?id='+article.id">
         <n-thing
           :title="article.title"
           content-style="margin-left:4px;margin-top: 10px;"
@@ -35,6 +36,7 @@
           <n-ellipsis :line-clamp="2" v-html="article.overview ">
           </n-ellipsis>
         </n-thing>
+        </NuxtLink>
       </n-list-item>
     </n-list>
   </n-flex>
@@ -48,7 +50,6 @@ useHeadSafe({
   title: "文章列表"
 });
 const auth = useCookie("auth");
-
 const { data: articles } = await useFetch('/api/article/list')
 
 </script>

@@ -4,6 +4,7 @@ const db = new PrismaClient()
 
 
 type article = {
+    id?: number,
     title?: string,
     overview?: string,
     auther?: string | null,
@@ -25,6 +26,7 @@ async function list() {
             tags.push(tag.name)
         })
         articles.push({
+            id: art.id,
             title: art.title,
             overview: art.content.replace(/<[^>]*>/g, '').substr(0, 300) + '...',
             auther: art.auther.username || '',

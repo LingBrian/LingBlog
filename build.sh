@@ -14,4 +14,4 @@ cd ../../
 cp prisma/schema.prisma .output/server/prisma
 cd .output
 docker build -t autobuild:latest .
-echo "success"
+echo "build image success"

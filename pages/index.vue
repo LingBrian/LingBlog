@@ -45,7 +45,7 @@
               </n-tag>
             </n-space>
           </template>
-          <n-ellipsis :line-clamp="2" v-html="top.overview">
+          <n-ellipsis  :line-clamp="2" v-html="top.overview">
            
           </n-ellipsis>
         </n-thing>
@@ -63,12 +63,14 @@
       hoverable
       clickable
       show-divider
+      bordered
     >
       <n-list-item
         v-for="article in articleList"
         :style="{ padding: '10px 0 0 16px',margin:'auto',width:'90%', height: '128px' }"
         bordered
       >
+      <NuxtLink  style="text-decoration: none;" target="_blank" :to="'/article?id='+article.id">
         <n-thing
           :title="article.title"
           content-style="margin-left:4px;margin-top: 10px;"
@@ -88,9 +90,10 @@
               </n-tag>
             </n-space>
           </template>
-          <n-ellipsis :line-clamp="2" v-html="article.overview ">
+          <n-ellipsis  tooltip="false" :line-clamp="2" v-html="article.overview ">
           </n-ellipsis>
         </n-thing>
+        </NuxtLink>
       </n-list-item>
     </n-list>
   </n-flex>
@@ -101,7 +104,7 @@ import { ref, onMounted, h } from "vue";
 import { NIcon } from "naive-ui";
 import type { MenuOption } from "naive-ui";
 
-useHeadSafe({ title: "HelloWorld" });
+useHeadSafe({ title: "LingBlog" });
 
 const menuOptions: MenuOption[] = [
   {
@@ -217,20 +220,6 @@ const imgs: img[] = [
   {
     src: "https://pic4.zhimg.com/v2-e24855e2d87577bd7cff4eefcbc58973_r.jpg",
     url: "",
-  },
-];
-const tops: top[] = [
-  {
-    title: "山行",
-    overview:
-      "远上寒山石径斜，白云深处有人家。停车坐爱枫林晚，霜叶红于二月花。",
-    tags: ["杜牧", "唐朝", "托物言志"],
-  },
-  {
-    title: "月下独酌·其一",
-    overview:
-      "花间一壶酒，独酌无相亲。举杯邀明月，对影成三人。月既不解饮，影徒随我身。暂伴月将影，行乐须及春。我歌月徘徊，我舞影零乱。醒时相交欢，醉后各分散。永结无情游，相期邈云汉。",
-    tags: ["李白", "借景抒情", "唐朝"],
   },
 ];
 const shows: show[] = [
