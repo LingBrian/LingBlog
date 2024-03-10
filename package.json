@@ -1,0 +1,32 @@
+{
+  "name": "lingblog",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "naive-ui": "^2.37.3",
+    "nuxt": "^3.9.3",
+    "vfonts": "^0.0.3",
+    "vue": "^3.4.14",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@css-render/vue3-ssr": "^0.15.12",
+    "@prisma/client": "^5.9.1",
+    "@vicons/ionicons5": "^0.12.0",
+    "@wangeditor/editor": "^5.1.23",
+    "@wangeditor/editor-for-vue": "next",
+    "prisma": "^5.9.1",
+    "unplugin-auto-import": "^0.17.3",
+    "unplugin-vue-components": "^0.26.0"
+  },
+  "version": "1.0.0",
+  "main": "app.vue",
+  "license": "MIT"
+}
