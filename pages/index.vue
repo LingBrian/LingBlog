@@ -1,4 +1,4 @@
-<template>
+<template title="Index">
   <!--Top News-->
   <n-flex :style="{ padding: '10px 0 0 0' }" justify="space-around">
     <n-carousel
@@ -32,6 +32,7 @@
         :style="{ padding: '10px 0 0 16px', height: '128px' }"
         bordered
       >
+      <NuxtLink  style="text-decoration: none;" target="_blank" :to="'/article?id='+top.id">
         <n-thing :title="top.title" content-style="margin-top: 10px;">
           <template #description>
             <n-space size="small" style="margin-top: 4px">
@@ -49,6 +50,7 @@
            
           </n-ellipsis>
         </n-thing>
+      </NuxtLink>
       </n-list-item>
     </n-list>
   </n-flex>
@@ -103,8 +105,17 @@
 import { ref, onMounted, h } from "vue";
 import { NIcon } from "naive-ui";
 import type { MenuOption } from "naive-ui";
+definePageMeta({
+  key: (route) => route.fullPath,
+});
 
-useHeadSafe({ title: "LingBlog" });
+
+
+onNuxtReady(() => {
+    
+    useHeadSafe({ title: "LingBlog" });
+    // 使用myAnalyticsLibrary进行一些操作
+  })
 
 const menuOptions: MenuOption[] = [
   {
@@ -267,4 +278,5 @@ type article = {
   date: string;
   tags: Array<string>;
 };
+
 </script>
