@@ -28,3 +28,4 @@ dist
 *.njsproj
 *.sln
 172.28.0.30
+yarn.lock
