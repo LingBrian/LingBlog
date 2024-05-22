@@ -26,6 +26,10 @@ dist
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
-172.28.0.30
+*.sln但从
 yarn.lock
+
+#prisma migrations
+prisma/migrations
+prisma/*.sql
+.env
