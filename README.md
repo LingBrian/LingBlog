@@ -26,7 +26,7 @@ This is a CMS powered by nuxt.js.
 
 Please make sure that the latest docker is installed in your machine.
 
-The default port is *80*,you can change it in *docker-compose.yml*.
+The default port is ```80```,you can change it in ```docker-compose.yml```.
 
 ```bash
 git clone https://github.com/LingBrian/LingBlog.git
@@ -38,7 +38,7 @@ docker compose up # -d
 
 ## YARN (recommend)/NPM 
 
-If you want to run the dev envriontment , please chage the *.env* file to connect to your database.The url format is in *[here](https://www.prisma.io/docs/orm/reference/connection-urls)*.The default database is *Postgrsql*.
+If you want to run the dev envriontment , please chage the ```.env``` file to connect to your database.The url format is in [```here```](https://www.prisma.io/docs/orm/reference/connection-urls).The default database is ```Postgrsql```.
 
 ```bash
 yarn # npm install --isntall the rquired packages
