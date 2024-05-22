@@ -31,5 +31,4 @@ yarn.lock
 
 #prisma migrations
 prisma/migrations
-prisma/*.sql
 .env
