@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "up": "rm -rf ./prisma/migrations/* && npx prisma migrate dev --name init.sql && cp ./prisma/migrations/*init_sql/migration.sql ./prisma/init.sql && docker compose up",
+    "up": "nuxt build && rm -rf ./prisma/migrations/* && npx prisma migrate dev --name init.sql && cp ./prisma/migrations/*init_sql/migration.sql ./prisma/init.sql && docker compose up",
     "down": "docker compose down"
   },
   "devDependencies": {
