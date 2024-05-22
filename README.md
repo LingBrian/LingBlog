@@ -5,7 +5,7 @@
 
 <img src="./public/img/logo.png" style="width:25%;">
 
-This is a cms powered by nuxt.js.
+This is a CMS powered by nuxt.js.
 
  Here is the demo --> [blog.brl0.top](https://blog.brl0.top)
 
@@ -14,6 +14,8 @@ This is a cms powered by nuxt.js.
 ![](https://img.shields.io/badge/Typescript--informational?style=white&logo=Typescript&logoColor=white&color=white)
 ![](https://img.shields.io/badge/Typescript-5.9.1-informational?style=white&logo=Prisma&logoColor=#2D3748&color=blue)
 ![](https://img.shields.io/badge/Yarn-1.22.22-informational?style=white&logo=Yarn&logoColor=white&color=blue)
+
+<br>
 
 <div align="left">
 
@@ -27,10 +29,11 @@ $ cd LingBlog
 $ yarn up
 
 ```
-</div>
+
 
 # Connect With Me
 
-  e-mail:brianling@qq.com
+  brianling@qq.com
+</div>
 
 </div>
