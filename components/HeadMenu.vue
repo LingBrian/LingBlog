@@ -32,7 +32,7 @@
       >
         <a
           style="text-decoration: none; color: white"
-          to="/user/login"
+          href="/user/login"
           target="_self"
         >
           <n-button type="primary"> 登录 </n-button>
@@ -40,7 +40,7 @@
         /
         <a
           style="text-decoration: none; color: white"
-          to="/user/register"
+          href="/user/register"
           target="_self"
         >
           <n-button type="info"> 注册 </n-button>
