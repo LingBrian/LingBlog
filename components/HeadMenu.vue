@@ -30,21 +30,21 @@
         span="0 m:4 l:4"
         :style="{ margin: 'auto', display: auth == '' ? 'unset' : 'none' }"
       >
-        <Llink
+        <a
           style="text-decoration: none; color: white"
           to="/user/login"
           target="_self"
         >
           <n-button type="primary"> 登录 </n-button>
-        </Llink>
+    </a>
         /
-        <Llink
+        <a
           style="text-decoration: none; color: white"
           to="/user/register"
           target="_self"
         >
           <n-button type="info"> 注册 </n-button>
-        </Llink>
+    </a>
       </n-gi>
       <n-gi
         span="0 m:3 l:3"
